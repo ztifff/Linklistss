@@ -67,5 +67,22 @@ public class Cll {
 		
 		
 	}
+	public void delete(int position) {
+		
+		
+		if (position == 0) {
+			Node lastNode = headNode;
+			
+			while (lastNode.nextNode != headNode) {
+				lastNode = lastNode.nextNode;
+			}
+			
+			headNode = headNode.getNext();
+			lastNode.setNext(headNode);
+			
+			return;
+		}
+		
+	}
 
 }

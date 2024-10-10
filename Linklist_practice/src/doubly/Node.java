@@ -7,8 +7,8 @@ public class Node {
 	Node prevNode;
 	
 	public Node() {
-		data =0;
 		nextNode=null;
+		data =0;
 		prevNode=null;
 	
 	}

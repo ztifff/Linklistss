@@ -3,10 +3,11 @@ package doubly;
 import java.util.Scanner;
 
 public class Main_prog {
+	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scanner = new Scanner(System.in);
+		
 		
 		Linklist list = new Linklist();
 		
@@ -19,11 +20,40 @@ public class Main_prog {
 		}
 //		list.deleteHead();
 		list.display();
-		list.reverse();
+		System.out.println();
+		list.average();
+		System.out.println();
+		list.highest();
+//		list.reverse();
 		
-//		list.bago1(new Node(9));
-		list.bago2(new Node(7), 0);
+		insert(list);
 		list.display();
+		
+		delete(list);
+		list.display();
+		
+		System.out.println();
+		list.average();
+//		System.out.println();
+//		list.deleteHighest();
+//		list.display();
+	}
+	
+	public static void insert(Linklist list) {
+		System.out.print("Enter position: ");
+		int position = scanner.nextInt();
+		System.out.print("Enter new value: ");
+		int newVal = scanner.nextInt();
+		
+		
+		list.insert(new Node(newVal), position);
+		
+	}
+	public static void delete(Linklist list) {
+		System.out.print("Enter positon to delete: ");
+		int position = scanner.nextInt();
+		
+		list.delete(position);
 	}
 
 }

@@ -3,6 +3,7 @@ package cll;
 import java.util.Scanner;
 
 
+
 public class Main_CLL {
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -23,6 +24,9 @@ public class Main_CLL {
 		
 		insert(listCll);
 		listCll.display();
+		
+		delete(listCll);
+		listCll.display();
 
 	}
 	
@@ -35,6 +39,12 @@ public class Main_CLL {
 		
 		listCll.insert(new Node(newValue), position);
 		
+	}
+	public static void delete(Cll listCll) {
+		System.out.println("Enter a position: ");
+		int position = scanner.nextInt();
+		
+		listCll.delete(position);
 	}
 
 }
